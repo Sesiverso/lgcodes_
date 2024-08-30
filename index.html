@@ -108,13 +108,16 @@
             // Cria um objeto FormData com os dados do formulário
             const formData = new FormData(this);
 
-            fetch('https://formspree.io/f/mblrwbqy', { // Substitua pelo link fornecido pelo Formspree
+            fetch('https://formspree.io/f/mblrwbqy', { // URL do Formspree
                 method: 'POST',
                 body: formData
             })
             .then(response => {
                 if (response.ok) {
-                    window.location.href = "https://sesiverso.github.io/Obrigado-/"; // Redireciona para a página de agradecimento
+                    // Aguarda 3 segundos antes de redirecionar
+                    setTimeout(() => {
+                        window.location.href = "https://sesiverso.github.io/Obrigado-/"; // URL da página de agradecimento
+                    }, 3000);
                 } else {
                     alert("Houve um problema ao enviar o formulário. Tente novamente.");
                 }
