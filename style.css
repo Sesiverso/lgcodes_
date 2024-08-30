@@ -12,7 +12,8 @@ body {
 header {
     width: 80%; /* Defina uma largura para o header */
     margin: 100px auto 0; /* Centraliza o header e adiciona 100px de margem superior */
-    margin-right: 10px; /* Move o header 10px para a direita */
+    margin-left: 20px; /* Move o header 20px para a esquerda */
+    margin-right: -20px;
     background: rgba(34, 139, 34, 0.9); /* Verde escuro com transparência */
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
