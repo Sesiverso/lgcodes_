@@ -7,8 +7,6 @@
     <title>LGCodes - Desenvolvimento de Sites</title>
     <!-- Link para o CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Cabeçalho do Site -->
@@ -68,7 +66,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Contato</h2>
-            <form id="contact-form" action="https://formsubmit.co/luizguilhermevalentinereis@gmail.com" method="POST">
+            <form action="enviar_email.php" method="POST" id="contact-form" onsubmit="redirectToThankYouPage(event)">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
@@ -89,6 +87,7 @@
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                 </div>
+                <!-- CAPTCHA -->
                 <div class="form-group">
                     <div class="g-recaptcha" data-sitekey="6LeUrTIqAAAAAFBCQU9y3hZWPp_cJGo4xAgb-anL"></div>
                 </div>
@@ -97,44 +96,19 @@
         </div>
     </section>
 
-    <!-- JavaScript para rolagem suave e envio de formulário -->
+    <!-- JavaScript para rolagem suave e redirecionamento -->
     <script>
         function scrollToForm() {
             document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
         }
 
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Previne o envio padrão do formulário
-
-            // Verifica se o reCAPTCHA foi preenchido
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (recaptchaResponse.length === 0) {
-                alert('Por favor, complete o reCAPTCHA.');
-                return;
-            }
-
-            // Enviar o formulário usando Fetch API
-            fetch(this.action, {
-                method: 'POST',
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    // Se o envio for bem-sucedido, aguarde 3 segundos e redirecione
-                    setTimeout(function() {
-                        window.location.href = 'https://sesiverso.github.io/Obrigado-/'; // Substitua pelo URL de destino
-                    }, 3000);
-                } else {
-                    // Caso haja um erro, exiba uma mensagem de erro
-                    alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
-                }
-            }).catch(error => {
-                console.error('Erro:', error);
-                alert('Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.');
-            });
-        });
+        function redirectToThankYouPage(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+            // Aqui você pode adicionar a lógica de envio de dados do formulário usando JavaScript se necessário
+            window.location.href = "https://sesiverso.github.io/Obrigado-/"; // Redireciona para a página de agradecimento
+        }
     </script>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
