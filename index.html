@@ -94,5 +94,33 @@
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     }
   </script>
+
+  <!-- Script para enviar o formulário e redirecionar -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+      
+      var form = this;
+      
+      // Envia o formulário usando Fetch API
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => {
+        if (response.ok) {
+          // Espera 3 segundos e redireciona para a página de agradecimento
+          setTimeout(function() {
+            window.location.href = form.querySelector('input[name="_next"]').value;
+          }, 3000);
+        } else {
+          alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+        }
+      })
+      .catch(error => {
+        alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+      });
+    });
+  </script>
 </body>
 </html>
