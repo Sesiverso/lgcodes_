@@ -66,7 +66,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Contato</h2>
-            <form action="enviar_email.php" method="POST" id="contact-form" onsubmit="redirectToThankYouPage(event)">
+            <form id="contact-form">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
@@ -87,7 +87,7 @@
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                 </div>
-                <!-- CAPTCHA -->
+                <!-- CAPTCHA do Google -->
                 <div class="form-group">
                     <div class="g-recaptcha" data-sitekey="6LeUrTIqAAAAAFBCQU9y3hZWPp_cJGo4xAgb-anL"></div>
                 </div>
@@ -96,17 +96,34 @@
         </div>
     </section>
 
-    <!-- JavaScript para rolagem suave e redirecionamento -->
+    <!-- JavaScript para rolagem suave e envio de formulário -->
     <script>
         function scrollToForm() {
             document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
         }
 
-        function redirectToThankYouPage(event) {
-            event.preventDefault(); // Evita o envio padrão do formulário
-            // Aqui você pode adicionar a lógica de envio de dados do formulário usando JavaScript se necessário
-            window.location.href = "https://sesiverso.github.io/Obrigado-/"; // Redireciona para a página de agradecimento
-        }
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Cria um objeto FormData com os dados do formulário
+            const formData = new FormData(this);
+
+            fetch('https://formspree.io/f/mblrwbqy', { // Substitua pelo link fornecido pelo Formspree
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "obrigado.html"; // Redireciona para a página de agradecimento
+                } else {
+                    alert("Houve um problema ao enviar o formulário. Tente novamente.");
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao enviar o formulário:", error);
+                alert("Houve um problema ao enviar o formulário. Tente novamente.");
+            });
+        });
     </script>
     <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
