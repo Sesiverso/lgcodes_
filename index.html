@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
     <div class="logo">LGCodes</div>
     <nav>
@@ -19,6 +20,7 @@
     </nav>
   </header>
 
+  <!-- Seção de Introdução -->
   <section id="home">
     <div class="intro">
       <h1>Transforme sua Presença Online com a LGCodes</h1>
@@ -26,6 +28,7 @@
     </div>
   </section>
 
+  <!-- Seção de Serviços -->
   <section id="services">
     <h2>Nossos Serviços</h2>
     <div class="service-grid">
@@ -47,14 +50,16 @@
     </div>
   </section>
 
+  <!-- Seção Sobre -->
   <section id="about">
     <h2>Sobre a LGCodes</h2>
-    <p>A LGCodes é uma empresa dedicada a criar sites personalizados...</p>
+    <p>A LGCodes é uma empresa dedicada a criar sites personalizados que atendem às necessidades específicas de cada cliente. Utilizamos as melhores tecnologias e práticas para garantir que o seu site seja não apenas funcional, mas também atraente e moderno.</p>
   </section>
 
+  <!-- Formulário de Contato -->
   <section id="contact">
     <h2>Solicite um Orçamento</h2>
-    <form action="mailto:luizguilhermevalentinereis@gmail.com" method="post" enctype="text/plain">
+    <form id="contact-form" action="https://formsubmit.co/luizguilhermevalentinereis@gmail.com" method="POST">
       <input type="text" name="nome" placeholder="Seu Nome" required>
       <input type="email" name="email" placeholder="Seu Email" required>
       <select name="servico">
@@ -64,14 +69,20 @@
       </select>
       <input type="text" name="orcamento" placeholder="Seu Orçamento">
       <textarea name="mensagem" placeholder="Sua Mensagem"></textarea>
+      
+      <!-- Configurações do FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
+       <!-- Substitua pela URL da página de agradecimento -->
       <button type="submit">Enviar</button>
     </form>
   </section>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2024 LGCodes. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Script para rolar até o formulário -->
   <script>
     function scrollToForm() {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
