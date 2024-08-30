@@ -1,143 +1,85 @@
-/* Reset de Estilos */
-* {
+/* styles.css */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Texto branco */
+    background: url('https://img.freepik.com/fotos-premium/primer-plano-libro-pila-libros_1034045-92033.jpg?w=1060') no-repeat center center fixed;
+    background-size: cover;
+    perspective: 1000px; /* Adiciona um efeito de perspectiva 3D */
 }
 
-/* Estilo para o Header */
 header {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 128, 0, 0.8); /* Cor verde com transparência */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-list li {
-    margin: 0 15px;
+    display: inline;
+    margin-right: 20px;
 }
 
 .nav-list a {
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .nav-list a:hover {
-    background-color: #4caf50;
-    color: #fff;
-    border-radius: 4px;
+    transform: translateY(-5px); /* Efeito 3D ao passar o mouse */
 }
 
-/* Seção Principal */
-.main-section {
-    padding: 100px 20px 50px;
-    background-color: #f4f4f4;
-    text-align: center;
-    margin-top: 60px; /* Ajuste para compensar o cabeçalho fixo */
+.main-section, .services-section, .about-section, .contact-section {
+    padding: 40px;
+    background: rgba(0, 128, 0, 0.7); /* Verde com transparência */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: rotateX(10deg) rotateY(10deg); /* Efeito 3D nas seções */
 }
 
-.main-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.main-section h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.main-section p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
+h1, h2, h3, p {
+    margin: 0 0 20px;
 }
 
 .btn {
-    background-color: #4caf50; /* Cor verde principal */
+    background: #00ff00; /* Verde brilhante */
     color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 10px 20px;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
+    border-radius: 5px;
     text-transform: uppercase;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 6px #388e3c;
-    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px #2e7d32;
-    background-color: #388e3c;
+    background: #00cc00;
+    transform: translateY(-3px); /* Efeito 3D ao passar o mouse */
 }
 
-.btn:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px #2e7d32;
-}
-
-/* Serviços */
-.services-section {
-    padding: 60px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.service-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.service-title {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.service-description {
-    color: #666;
+.form-group {
     margin-bottom: 20px;
 }
 
-/* Seção Sobre */
-.about-section
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.g-recaptcha {
+    margin-top: 20px;
+}
