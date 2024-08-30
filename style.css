@@ -12,10 +12,10 @@ body {
 header {
     width: 80%; /* Defina uma largura para o header */
     margin: 100px auto 0; /* Centraliza o header e adiciona 100px de margem superior */
-    margin-left: 20px; /* Move o header 20px para a esquerda */
-    margin-right: -20px;
+    margin-left: 50px; /* Move o header 20px para a esquerda */
+    margin-right: -50px;
     background: rgba(34, 139, 34, 0.9); /* Verde escuro com transparência */
-    padding: 30px;
+    padding: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     transform: rotateX(10deg) rotateY(-10deg); /* Efeito 3D */
@@ -33,7 +33,7 @@ header {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 80px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
