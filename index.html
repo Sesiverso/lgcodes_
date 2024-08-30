@@ -66,7 +66,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Contato</h2>
-            <form action="enviar_email.php" method="POST" id="contact-form">
+            <form id="contact-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
@@ -100,6 +100,18 @@
     <script>
         function scrollToForm() {
             document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+
+            // Adiciona uma pequena pausa para garantir que o formulário seja enviado
+            setTimeout(function() {
+                window.location.href = "https://sesiverso.github.io/Obrigado-/"; // Altere para o URL desejado
+            }, 500);
+
+            // Se precisar enviar o formulário realmente, adicione aqui o código para isso
+            // Exemplo: document.getElementById('contact-form').submit();
         }
     </script>
     <!-- Google reCAPTCHA -->
