@@ -1,104 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LGCodes - Desenvolvimento de Sites</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGCodes - Desenvolvimento de Sites</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header class="site-header">
-    <div class="container">
-      <div class="logo">LGCodes</div>
-      <nav class="navbar">
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">Sobre</a></li>
-          <li><a href="#services" class="nav-link">Serviços</a></li>
-          <li><a href="#contact" class="nav-link">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Cabeçalho do Site -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Seção de Introdução -->
-  <section id="home" class="hero-section">
-    <div class="container">
-      <div class="intro">
-        <h1 class="hero-title">Transforme sua Presença Online com a LGCodes</h1>
-        <p class="hero-subtitle">Desenvolvemos sites personalizados para elevar o seu negócio ao próximo nível.</p>
-        <a href="#services" class="btn btn-primary">Explore Nossos Serviços</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção de Serviços -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2 class="section-title">Nossos Serviços</h2>
-      <div class="service-grid">
-        <div class="service-card">
-          <h3 class="service-title">Padrão</h3>
-          <p class="service-description">Criamos um site com base nas suas informações. Layout básico, mas funcional.</p>
-          <button class="btn btn-secondary" onclick="scrollToForm()">Saiba Mais</button>
+    <!-- Seção Principal -->
+    <section id="home" class="main-section">
+        <div class="container">
+            <h1>Transforme sua Presença Online com a LGCodes</h1>
+            <p>Desenvolvemos sites personalizados para elevar o seu negócio ao próximo nível.</p>
+            <a href="#services" class="btn btn-primary">Explore Nossos Serviços</a>
         </div>
-        <div class="service-card">
-          <h3 class="service-title">Avançado</h3>
-          <p class="service-description">Desenvolvemos um layout profissional e um site conforme suas necessidades.</p>
-          <button class="btn btn-secondary" onclick="scrollToForm()">Saiba Mais</button>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3 class="service-title">Padrão</h3>
+                    <p class="service-description">Criamos um site com base nas suas informações. Layout básico, mas funcional.</p>
+                    <button class="btn btn-primary" onclick="scrollToForm()">Saiba Mais</button>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Avançado</h3>
+                    <p class="service-description">Desenvolvemos um layout profissional e um site conforme suas necessidades.</p>
+                    <button class="btn btn-primary" onclick="scrollToForm()">Saiba Mais</button>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">Estiloso</h3>
+                    <p class="service-description">Criamos o melhor layout e site possíveis com base nas suas informações.</p>
+                    <button class="btn btn-primary" onclick="scrollToForm()">Saiba Mais</button>
+                </div>
+            </div>
         </div>
-        <div class="service-card">
-          <h3 class="service-title">Estiloso</h3>
-          <p class="service-description">Criamos o melhor layout e site possíveis com base nas suas informações.</p>
-          <button class="btn btn-secondary" onclick="scrollToForm()">Saiba Mais</button>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Sobre a LGCodes</h2>
+            <p>A LGCodes é uma empresa dedicada a criar sites incríveis para clientes incríveis. Combinamos design moderno, funcionalidade e acessibilidade para entregar a melhor experiência digital.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Seção Sobre -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2 class="section-title">Sobre a LGCodes</h2>
-      <p class="about-text">A LGCodes é uma empresa dedicada a criar sites personalizados que atendem às necessidades específicas de cada cliente. Utilizamos as melhores tecnologias e práticas para garantir que o seu site seja não apenas funcional, mas também atraente e moderno.</p>
-    </div>
-  </section>
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <form action="enviar_email.php" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="servico">Serviço desejado:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="padrao">Padrão</option>
+                        <option value="avancado">Avançado</option>
+                        <option value="estiloso">Estiloso</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div>
+                <!-- CAPTCHA -->
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="SUA_CHAVE_SITE"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
 
-  <!-- Formulário de Contato -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2 class="section-title">Solicite um Orçamento</h2>
-      <form id="contact-form" class="form" action="https://formsubmit.co/luizguilhermevalentinereis@gmail.com" method="POST">
-        <input type="text" name="nome" placeholder="Seu Nome" class="form-input" required>
-        <input type="email" name="email" placeholder="Seu Email" class="form-input" required>
-        <select name="servico" class="form-select" required>
-          <option value="padrao">Padrão</option>
-          <option value="avancado">Avançado</option>
-          <option value="estiloso">Estiloso</option>
-        </select>
-        <input type="text" name="orcamento" placeholder="Seu Orçamento" class="form-input">
-        <textarea name="mensagem" placeholder="Sua Mensagem" class="form-textarea"></textarea>
-        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-        <input type="hidden" name="_template" value="table">
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-text">&copy; 2024 LGCodes. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Script para rolar até o formulário -->
-  <script>
-    function scrollToForm() {
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+    <!-- JavaScript para rolagem suave -->
+    <script>
+        function scrollToForm() {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
