@@ -11,7 +11,8 @@ body {
 
 header {
     width: 80%; /* Defina uma largura para o header */
-    margin: 0 auto; /* Centraliza o header */
+    margin: 0 auto;
+    margin-right: 10px; /* Move o header 10px para a direita */
     background: rgba(34, 139, 34, 0.9); /* Verde escuro com transparência */
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -43,7 +44,8 @@ header {
 /* Seções principais */
 .main-section, .services-section, .about-section, .contact-section {
     width: 70%; /* Defina uma largura para as seções principais */
-    margin: 50px auto; /* Centraliza as seções principais e adiciona margem superior/inferior */
+    margin: 50px auto;
+    margin-right: 10px; /* Move as seções principais 10px para a direita */
     padding: 25px;
     background: rgba(34, 139, 34, 0.8); /* Verde com mais transparência */
     border-radius: 20px;
@@ -82,7 +84,8 @@ p {
 .btn {
     display: block; /* Torna o botão um bloco para centralização */
     width: fit-content; /* Define o tamanho do botão de acordo com seu conteúdo */
-    margin: 20px auto; /* Centraliza o botão */
+    margin: 20px auto;
+    margin-right: 10px; /* Move o botão 10px para a direita */
     background: #00ff00; /* Verde brilhante */
     color: #fff;
     padding: 15px 30px;
@@ -104,7 +107,8 @@ p {
 input, select, textarea {
     display: block; /* Torna os inputs blocos para centralização */
     width: 100%; /* Mantém a largura completa */
-    margin: 0 auto; /* Centraliza os inputs, selects e textareas */
+    margin: 0 auto;
+    margin-right: 10px; /* Move os inputs, selects e textareas 10px para a direita */
     padding: 15px;
     border: 1px solid #00cc00; /* Borda verde */
     border-radius: 10px;
@@ -126,7 +130,8 @@ textarea {
 /* Formulário de contato */
 form {
     width: 60%; /* Define a largura do formulário */
-    margin: 0 auto; /* Centraliza o formulário */
+    margin: 0 auto;
+    margin-right: 10px; /* Move o formulário 10px para a direita */
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
