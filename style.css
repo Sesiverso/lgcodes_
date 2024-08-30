@@ -1,111 +1,46 @@
-/* Reset e estilos base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Estilo dos Botões com Efeito 3D */
+.btn {
+  background-color: #4caf50; /* Cor verde principal */
+  color: #fff; /* Cor do texto */
+  padding: 12px 24px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  border: none; /* Sem bordas */
+  cursor: pointer; /* Cursor pointer para indicar que é clicável */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: 600; /* Espessura da fonte */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  box-shadow: 0 6px #388e3c; /* Sombra inferior para o efeito 3D */
+  display: inline-block; /* Para garantir que o espaçamento funcione corretamente */
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #f5f5f5;
-  line-height: 1.6;
+.btn:hover {
+  transform: translateY(-3px); /* Eleva o botão para criar um efeito de clique */
+  box-shadow: 0 9px #2e7d32; /* Muda a sombra ao passar o mouse */
+  background-color: #388e3c; /* Escurece a cor de fundo ao passar o mouse */
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.btn:active {
+  transform: translateY(2px); /* Afunda o botão ao ser clicado */
+  box-shadow: 0 4px #2e7d32; /* Diminui a sombra ao clicar */
 }
 
-/* Cabeçalho */
-.site-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+/* Botão Secundário */
+.btn-secondary {
+  background-color: #fff; /* Cor de fundo branco para botões secundários */
+  color: #4caf50; /* Texto verde */
+  border: 2px solid #4caf50; /* Borda verde */
+  box-shadow: none; /* Sem sombra por padrão */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #4caf50;
+.btn-secondary:hover {
+  background-color: #4caf50; /* Fundo verde ao passar o mouse */
+  color: #fff; /* Texto branco ao passar o mouse */
+  box-shadow: 0 6px rgba(0, 0, 0, 0.1); /* Sombra leve para efeito 3D */
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.btn-secondary:active {
+  background-color: #388e3c; /* Fundo mais escuro ao clicar */
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1); /* Sombra mais clara ao clicar */
 }
-
-.nav-list {
-  list-style: none;
-  display: flex;
-}
-
-.nav-link {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #4caf50;
-}
-
-/* Seção de Introdução */
-.hero-section {
-  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1470&q=80');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 120px 0;
-  text-align: center;
-  position: relative;
-}
-
-.hero-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-section .container {
-  position: relative;
-  z-index: 10;
-}
-
-.hero-title {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.hero-subtitle {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.btn-primary {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #388e3c
