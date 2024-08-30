@@ -11,9 +11,9 @@ body {
 
 header {
     width: 80%; /* Defina uma largura para o header */
-    margin: 100px auto 0; /* Centraliza o header e adiciona 100px de margem superior */
-    margin-left: 50px; /* Move o header 20px para a esquerda */
-    margin-right: -50px;
+    margin: 150px; /* Centraliza o header e adiciona 100px de margem superior */
+    margin-left: 20px; /* Move o header 20px para a esquerda */
+    margin-right: -20px;
     background: rgba(34, 139, 34, 0.9); /* Verde escuro com transparência */
     padding: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -45,9 +45,8 @@ header {
 /* Seções principais */
 .main-section, .services-section, .about-section, .contact-section {
     width: 50%; /* Defina uma largura para as seções principais */
-    margin: 50px auto 0;
-    margim-left: 10px;/* Centraliza as seções principais e garante que fiquem abaixo do header */
-    margin-right: -10px; /* Move as seções principais 10px para a direita */
+    margin: 50px auto 0;/* Centraliza as seções principais e garante que fiquem abaixo do header */
+    margin-right: 30px; /* Move as seções principais 10px para a direita */
     padding: 25px;
     background: rgba(34, 139, 34, 0.8); /* Verde com mais transparência */
     border-radius: 20px;
@@ -86,9 +85,8 @@ p {
 .btn {
     display: block; /* Torna o botão um bloco para centralização */
     width: fit-content; /* Define o tamanho do botão de acordo com seu conteúdo */
-    margin: 40px auto 0; /* Centraliza o botão e adiciona 40px de margem superior */
-      margim-left: 10px;/* Centraliza as seções principais e garante que fiquem abaixo do header */
-    margin-right: -10px; /* Move o botão 10px para a direita */
+    margin: 40px auto 0; /* Centraliza o botão e adiciona 40px de margem superior *//* Centraliza as seções principais e garante que fiquem abaixo do header */
+    margin-right: 30px; /* Move o botão 10px para a direita */
     background: #00ff00; /* Verde brilhante */
     color: #fff;
     padding: 15px 30px;
@@ -110,9 +108,8 @@ p {
 input, select, textarea {
     display: block; /* Torna os inputs blocos para centralização */
     width: 100%; /* Mantém a largura completa */
-    margin: 20px auto 0; /* Centraliza os inputs, selects e textareas, adiciona 20px extra de margem superior */
-      margim-left: 10px;/* Centraliza as seções principais e garante que fiquem abaixo do header */
-    margin-right: -10px; /* Move os inputs, selects e textareas 10px para a direita */
+    margin: 20px auto 0; /* Centraliza os inputs, selects e textareas, adiciona 20px extra de margem superior *//* Centraliza as seções principais e garante que fiquem abaixo do header */
+    margin-right: 30px; /* Move os inputs, selects e textareas 10px para a direita */
     padding: 15px;
     border: 1px solid #00cc00; /* Borda verde */
     border-radius: 10px;
