@@ -1,85 +1,125 @@
-/* styles.css */
+/* Configurações gerais */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #fff; /* Texto branco */
+    color: #fff;
     background: url('https://img.freepik.com/fotos-premium/primer-plano-libro-pila-libros_1034045-92033.jpg?w=1060') no-repeat center center fixed;
     background-size: cover;
-    perspective: 1000px; /* Adiciona um efeito de perspectiva 3D */
+    perspective: 1000px; /* Perspectiva para efeitos 3D */
 }
 
 header {
-    background: rgba(0, 128, 0, 0.8); /* Cor verde com transparência */
+    background: rgba(34, 139, 34, 0.9); /* Verde escuro com transparência */
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: rotateX(10deg) rotateY(-10deg); /* Efeito 3D */
 }
 
 .nav-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-.nav-list li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.nav-list a {
+.nav-link {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.nav-list a:hover {
-    transform: translateY(-5px); /* Efeito 3D ao passar o mouse */
+.nav-link:hover {
+    transform: scale(1.1);
+    color: #00ff00; /* Verde brilhante */
 }
 
+/* Seções principais */
 .main-section, .services-section, .about-section, .contact-section {
-    padding: 40px;
-    background: rgba(0, 128, 0, 0.7); /* Verde com transparência */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transform: rotateX(10deg) rotateY(10deg); /* Efeito 3D nas seções */
+    padding: 60px;
+    background: rgba(34, 139, 34, 0.8); /* Verde com mais transparência */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    transform: rotateX(5deg) rotateY(5deg); /* Efeito 3D */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.main-section:hover, .services-section:hover, .about-section:hover, .contact-section:hover {
+    transform: rotateX(0deg) rotateY(0deg);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.7); /* Sombra mais pronunciada */
 }
 
 h1, h2, h3, p {
-    margin: 0 0 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra nos textos */
 }
 
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Botões */
 .btn {
     background: #00ff00; /* Verde brilhante */
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra do botão */
 }
 
 .btn:hover {
     background: #00cc00;
-    transform: translateY(-3px); /* Efeito 3D ao passar o mouse */
+    transform: translateY(-5px) rotateX(5deg); /* Efeito 3D e movimento */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
+/* Inputs, selects e textareas */
 input, select, textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #00cc00; /* Borda verde */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ao focar */
 }
 
 textarea {
     resize: vertical;
 }
 
+/* Formulário de contato */
+.form-group {
+    margin-bottom: 25px;
+}
+
 .g-recaptcha {
     margin-top: 20px;
 }
+
