@@ -13,10 +13,10 @@
     <header>
         <nav>
             <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#services" class="nav-link">Serviços</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         <div class="container">
             <h1>Transforme sua Presença Online com a LGCodes</h1>
             <p>Desenvolvemos sites personalizados para elevar o seu negócio ao próximo nível.</p>
-            <a href="#services" class="btn btn-primary">Explore Nossos Serviços</a>
+            <a href="#services" class="btn">Explore Nossos Serviços</a>
         </div>
     </section>
 
@@ -38,17 +38,17 @@
                 <div class="service-card">
                     <h3 class="service-title">Padrão</h3>
                     <p class="service-description">Criamos um site com base nas suas informações. Layout básico, mas funcional.</p>
-                    <button class="btn btn-primary" onclick="scrollToForm()">Saiba Mais</button>
+                    <button class="btn" onclick="scrollToForm()">Saiba Mais</button>
                 </div>
                 <div class="service-card">
                     <h3 class="service-title">Avançado</h3>
                     <p class="service-description">Desenvolvemos um layout profissional e um site conforme suas necessidades.</p>
-                    <button class="btn btn-primary" onclick="scrollToForm()">Saiba Mais</button>
+                    <button class="btn" onclick="scrollToForm()">Saiba Mais</button>
                 </div>
                 <div class="service-card">
                     <h3 class="service-title">Estiloso</h3>
                     <p class="service-description">Criamos o melhor layout e site possíveis com base nas suas informações.</p>
-                    <button class="btn btn-primary" onclick="scrollToForm()">Saiba Mais</button>
+                    <button class="btn" onclick="scrollToForm()">Saiba Mais</button>
                 </div>
             </div>
         </div>
@@ -87,11 +87,10 @@
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                 </div>
-                <!-- CAPTCHA do Google -->
                 <div class="form-group">
                     <div class="g-recaptcha" data-sitekey="6LeUrTIqAAAAAFBCQU9y3hZWPp_cJGo4xAgb-anL"></div>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn">Enviar</button>
             </form>
         </div>
     </section>
@@ -103,28 +102,26 @@
         }
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+            event.preventDefault();
 
-            // Cria um objeto FormData com os dados do formulário
             const formData = new FormData(this);
 
-            fetch('https://formspree.io/f/mblrwbqy', { // URL do Formspree
+            fetch('https://formspree.io/f/mblrwbqy', {
                 method: 'POST',
                 body: formData
             })
             .then(response => {
                 if (response.ok) {
-                    // Aguarda 3 segundos antes de redirecionar
                     setTimeout(() => {
-                        window.location.href = "https://sesiverso.github.io/Obrigado-/"; // URL da página de agradecimento
+                        window.location.href = "https://sesiverso.github.io/Obrigado-/";
                     }, 3000);
                 } else {
-                    alert("Houve um problema ao enviar o formulário,isso pode signficar que ele ainda não recebeu uma resposta, verifique seu e-mail, entraremos em contato em breve.");
+                    alert("Houve um problema ao enviar o formulário.Pode Ser que o problema seja que ainda não respondemos sua mensagem, de qualquer forma,tente novamente.");
                 }
             })
             .catch(error => {
                 console.error("Erro ao enviar o formulário:", error);
-                alert("Houve um problema ao enviar o formulário,isso pode signficar que ele ainda não recebeu uma resposta, verifique seu e-mail, entraremos em contato em breve.");
+                alert("Houve um problema ao enviar o formulário.Pode Ser que o problema seja que ainda não respondemos sua mensagem, de qualquer forma,tente novamente.");
             });
         });
     </script>
@@ -132,3 +129,4 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
+
