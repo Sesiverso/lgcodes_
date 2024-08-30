@@ -102,6 +102,12 @@
       
       var form = this;
       
+      // Verifica se o reCAPTCHA foi preenchido
+      if (grecaptcha.getResponse() === "") {
+        alert('Por favor, complete o reCAPTCHA.');
+        return;
+      }
+      
       // Envia o formulário usando Fetch API
       fetch(form.action, {
         method: 'POST',
